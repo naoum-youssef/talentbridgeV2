@@ -1,0 +1,112 @@
+
+
+/* ============== MAIN SELECTION PAGE STYLES ============== */
+.selection-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #f5f7fa, #e5e9f2);
+    padding: 2rem;
+}
+
+.selection-container {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.selection-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #0088cc, #9932cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.selection-tagline {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.selection-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.selection-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.selection-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.selection-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.student-icon {
+    background: linear-gradient(45deg, #0088cc, #00a8ff);
+}
+
+.enterprise-icon {
+    background: linear-gradient(45deg, #9932cc, #b14ef5);
+}
+
+.admin-icon {
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+}
+
+.selection-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.selection-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    min-height: 60px;
+}
+
+.selection-btn {
+    background: linear-gradient(45deg, #0088cc, #9932cc);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.selection-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive styles for selection page */
+@media (max-width: 768px) {
+    .selection-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}

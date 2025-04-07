@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .sidebar-active {
+        @apply bg-dashboard-active border-l-4 border-primary;
+    }
+
+    .nav-item-icon {
+        @apply h-5 w-5 opacity-75;
+    }
+
+    .menu-item {
+        @apply flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-dashboard-active transition-all duration-200 border-l-4 border-transparent cursor-pointer;
+    }
+
+    .menu-item.active {
+        @apply bg-dashboard-active border-l-4 border-primary font-medium;
+    }
+
+    .stat-card {
+        @apply bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1;
+    }
+
+    .stat-value {
+        @apply text-2xl font-bold mt-2;
+    }
+
+    .trend-positive {
+        @apply text-green-500 flex items-center text-sm;
+    }
+
+    .trend-negative {
+        @apply text-red-500 flex items-center text-sm;
+    }
+
+    .dashboard-card {
+        @apply bg-white rounded-xl shadow-card p-6 h-full;
+    }
+
+    .card-header {
+        @apply flex justify-between items-center pb-4 mb-4 border-b border-gray-100;
+    }
+
+    .card-title {
+        @apply text-lg font-semibold text-gray-800;
+    }
+
+    .dashboard-btn {
+        @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white hover:bg-blue-600;
+    }
+
+    .btn-outline {
+        @apply border border-gray-200 hover:bg-gray-50;
+    }
+
+    .btn-icon {
+        @apply p-2 rounded-md text-gray-500 hover:bg-gray-100 transition-colors duration-200;
+    }
+
+    .table-container {
+        @apply w-full overflow-x-auto;
+    }
+
+    .dashboard-table {
+        @apply min-w-full divide-y divide-gray-200;
+    }
+
+    .table-header {
+        @apply bg-gray-50;
+    }
+
+    .table-th {
+        @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+    }
+
+    .table-td {
+        @apply px-6 py-4 whitespace-nowrap;
+    }
+
+    .badge {
+        @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    }
+
+    .badge-success {
+        @apply bg-green-100 text-green-800;
+    }
+
+    .badge-warning {
+        @apply bg-yellow-100 text-yellow-800;
+    }
+
+    .badge-primary {
+        @apply bg-blue-100 text-blue-800;
+    }
+
+    .badge-secondary {
+        @apply bg-purple-100 text-purple-800;
+    }
+
+    /* Chart custom styles */
+    .chart-bar {
+        @apply rounded-t-md transition-all duration-300 hover:opacity-80 relative;
+    }
+
+    .chart-legend-item {
+        @apply flex items-center gap-2 text-sm text-gray-600;
+    }
+
+    .chart-legend-color {
+        @apply w-3 h-3 rounded;
+    }
+
+    /* Action buttons */
+    .action-btn-view {
+        @apply text-primary p-1 rounded hover:bg-blue-50;
+    }
+
+    .action-btn-edit {
+        @apply text-yellow-500 p-1 rounded hover:bg-yellow-50;
+    }
+
+    .action-btn-delete {
+        @apply text-red-500 p-1 rounded hover:bg-red-50;
+    }
+
+    /* Animation utilities */
+    .animate-fadeIn {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Pie chart specific styles */
+    .pie-center {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full flex items-center justify-center text-2xl font-bold;
+    }
+}
