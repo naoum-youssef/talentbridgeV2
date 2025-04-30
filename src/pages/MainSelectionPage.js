@@ -21,12 +21,12 @@ const MainSelectionPage = () => {
                 <div className="selection-options">
                     <div
                         className="selection-card"
-                        onClick={() => handleSelection('student')}
+                        onClick={() => handleSelection('candidat')}
                     >
                         <div className="selection-icon student-icon">
                             <i className="fas fa-user-graduate"></i>
                         </div>
-                        <h2>Étudiant</h2>
+                        <h2>Candidat</h2>
                         <p>Trouvez des stages et opportunités adaptés à votre profil</p>
                         <button className="selection-btn">Continuer</button>
                     </div>

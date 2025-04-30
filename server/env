@@ -1,0 +1,3 @@
+MONGO_URI=mongodb+srv://youssefnaoum:$123456@talentbridge.mmpshgs.mongodb.net/?retryWrites=true&w=majority&appName=talentbridge
+JWT_SECRET=ed841168af8eb6b7e53abbb568aee463dd25569b8663bce733d6c04c1e6ddeff
+PORT=5000
