@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { CandidatProvider } from './context/CandidatContext'; // Ajoutez cette importation
+import { CandidatProvider } from './context/CandidatContext';
 import MainSelectionPage from './pages/MainSelectionPage';
 import CandidatLoginPage from './pages/auth/CandidatLoginPage';
 import EnterpriseLoginPage from './pages/auth/EnterpriseLoginPage';
@@ -22,6 +22,7 @@ import './styles/base.css';
 import './styles/login.css';
 import './styles/forms.css';
 import './styles/selection.css';
+import './styles/candidat-dashboard.tailwind.css';
 
 function App() {
     return (
@@ -32,7 +33,7 @@ function App() {
                     <Route path="/login/candidat" element={<CandidatLoginPage />} />
                     <Route path="/login/enterprise" element={<EnterpriseLoginPage />} />
                     <Route path="/login/admin" element={<AdminLoginPage />} />
-                    <Route path="/candidat-dashboard" element={<CandidatDashboard />} /> {/* J'ai aussi corrigé cette route */}
+                    <Route path="/candidat-dashboard" element={<CandidatDashboard />} />
                     <Route path="/enterprise-dashboard" element={<EnterpriseDashboard />} />
                     <Route path="/admin-dashboard" element={<AdminDashboard />} />
                     <Route path="/pending-approval" element={<PendingApproval />} />

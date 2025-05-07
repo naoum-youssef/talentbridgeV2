@@ -1,9 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import * as candidatService from '../services/candidatService';
 
-const CandidatContext = createContext();
+// Créer le contexte mais sans l'exporter directement
+const CandidatContext = createContext(null);
 
-export const CandidatProvider = ({ children }) => {
+// Définir le provider sans l'exporter directement
+const CandidatProvider = ({ children }) => {
     const [candidat, setCandidat] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -69,6 +71,10 @@ export const CandidatProvider = ({ children }) => {
     return <CandidatContext.Provider value={value}>{children}</CandidatContext.Provider>;
 };
 
-export const useCandidat = () => {
+// Définir le hook custom sans l'exporter directement
+const useCandidat = () => {
     return useContext(CandidatContext);
 };
+
+// Exporter tout à la fin
+export { CandidatContext, CandidatProvider, useCandidat };

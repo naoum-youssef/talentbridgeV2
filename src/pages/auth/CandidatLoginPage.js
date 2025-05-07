@@ -75,22 +75,6 @@ const CandidatLoginPage = () => {
     };
 
     /**
-     * Fonction dial accès direct l dashboard sans authentification
-     * (Juste pour développement o testing)
-     */
-    const directAccessDashboard = () => {
-        // Optionnel: Remplir les champs automatiquement
-        setFormData({
-            ...formData,
-            email: "youssefnaoum@gmail.com",
-            password: "123456"
-        });
-
-        // Navigation directe l dashboard
-        navigate('/candidat-dashboard');
-    };
-
-    /**
      * Fonction li kat'gérer l'action dial inscription
      * Kat'verifi les champs obligatoires o kat'créer l'utilisateur via API
      */
@@ -196,25 +180,7 @@ const CandidatLoginPage = () => {
                             </div>
                         </form>
 
-                        {/* Bouton d'accès direct (pour développement) */}
-                        <div className="direct-access">
-                            <button
-                                onClick={directAccessDashboard}
-                                className="direct-access-btn"
-                                style={{
-                                    backgroundColor: '#3498db',
-                                    color: 'white',
-                                    padding: '8px 15px',
-                                    marginTop: '15px',
-                                    border: 'none',
-                                    borderRadius: '4px',
-                                    cursor: 'pointer'
-                                }}
-                                disabled={loading}
-                            >
-                                Accès Direct Dashboard (Dev)
-                            </button>
-                        </div>
+
 
                         {/* Section pour s'inscrire si pas encore de compte */}
                         <div className="register-prompt">
@@ -356,22 +322,7 @@ const CandidatLoginPage = () => {
                         </form>
 
                         {/* Bouton d'accès direct même en mode inscription */}
-                        <div className="direct-access" style={{ marginTop: '15px', textAlign: 'center' }}>
-                            <button
-                                onClick={directAccessDashboard}
-                                style={{
-                                    backgroundColor: '#3498db',
-                                    color: 'white',
-                                    padding: '8px 15px',
-                                    border: 'none',
-                                    borderRadius: '4px',
-                                    cursor: 'pointer'
-                                }}
-                                disabled={loading}
-                            >
-                                Accès Direct Dashboard (Dev)
-                            </button>
-                        </div>
+
                     </div>
                 )}
             </div>

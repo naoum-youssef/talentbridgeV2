@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* Menu et navigation */
+    .candidat-menu-item {
+        @apply flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-blue-800/30 transition-all duration-200 border-l-4 border-transparent cursor-pointer;
+    }
+
+    .candidat-menu-item.active {
+        @apply bg-blue-800/20 border-l-4 border-blue-500 font-medium;
+    }
+
+    .candidat-nav-icon {
+        @apply h-5 w-5 opacity-75;
+    }
+
+    /* Cartes et statistiques */
+    .candidat-card {
+        @apply bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
+    }
+
+    .candidat-stat-card {
+        @apply rounded-xl p-5 shadow-sm transition-all duration-300;
+    }
+
+    .stat-total {
+        @apply bg-gray-50 text-gray-800;
+    }
+
+    .stat-reviewing {
+        @apply bg-blue-50 text-blue-800;
+    }
+
+    .stat-interviewed {
+        @apply bg-purple-50 text-purple-800;
+    }
+
+    .stat-offered {
+        @apply bg-green-50 text-green-800;
+    }
+
+    .stat-rejected {
+        @apply bg-red-50 text-red-800;
+    }
+
+    .candidat-stat-value {
+        @apply text-2xl font-bold mt-1;
+    }
+
+    /* Badges de statut */
+    .candidat-badge {
+        @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border;
+    }
+
+    .badge-applied {
+        @apply bg-blue-100 text-blue-800 border-blue-300;
+    }
+
+    .badge-reviewing {
+        @apply bg-yellow-100 text-yellow-800 border-yellow-300;
+    }
+
+    .badge-interviewed {
+        @apply bg-purple-100 text-purple-800 border-purple-300;
+    }
+
+    .badge-offered {
+        @apply bg-green-100 text-green-800 border-green-300;
+    }
+
+    .badge-rejected {
+        @apply bg-red-100 text-red-800 border-red-300;
+    }
+
+    .badge-withdrawn {
+        @apply bg-gray-100 text-gray-800 border-gray-300;
+    }
+
+    /* Boutons */
+    .candidat-btn {
+        @apply px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+    }
+
+    .candidat-btn-primary {
+        @apply bg-blue-600 text-white hover:bg-blue-700;
+    }
+
+    .candidat-btn-outline {
+        @apply border border-gray-200 text-gray-700 hover:bg-gray-50;
+    }
+
+    .candidat-btn-link {
+        @apply text-blue-600 hover:text-blue-800 hover:underline;
+    }
+
+    /* Cartes d'application */
+    .application-card {
+        @apply bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-300;
+    }
+
+    .application-title {
+        @apply font-semibold text-gray-800;
+    }
+
+    .application-company {
+        @apply text-gray-600 text-sm;
+    }
+
+    .application-date {
+        @apply text-xs text-gray-500;
+    }
+
+    /* Cartes d'entretien */
+    .interview-card {
+        @apply bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-300;
+    }
+
+    .interview-title {
+        @apply font-semibold text-gray-800;
+    }
+
+    .interview-company {
+        @apply text-gray-600 text-sm;
+    }
+
+    .interview-detail {
+        @apply flex items-center text-gray-700 text-sm;
+    }
+
+    .interview-icon {
+        @apply mr-2 text-gray-500;
+    }
+
+    /* Cartes de job */
+    .job-card {
+        @apply bg-white rounded-lg shadow-md p-5 border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300;
+    }
+
+    .job-title {
+        @apply text-lg font-semibold text-gray-800 mb-1;
+    }
+
+    .job-company {
+        @apply text-gray-600 mb-1;
+    }
+
+    .job-location {
+        @apply text-gray-600 text-sm;
+    }
+
+    .job-salary {
+        @apply text-sm text-gray-600;
+    }
+
+    .job-type {
+        @apply text-sm text-gray-600;
+    }
+
+    .job-skill {
+        @apply bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full;
+    }
+
+    /* Progression du profil */
+    .profile-progress-container {
+        @apply w-full h-2.5 bg-gray-200 rounded-full overflow-hidden;
+    }
+
+    .profile-progress-bar {
+        @apply h-full bg-blue-600 rounded-full;
+    }
+
+    .action-item {
+        @apply flex items-center text-gray-600;
+    }
+
+    .action-icon {
+        @apply w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center mr-3;
+    }
+
+    .action-completed {
+        @apply text-green-600;
+    }
+
+    .action-pending {
+        @apply text-red-600;
+    }
+
+    /* Animation de chargement */
+    .loading-spinner {
+        @apply animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500;
+    }
+
+    /* Animation en fondu */
+    .animate-fadeIn {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
